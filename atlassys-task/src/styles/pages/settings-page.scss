@@ -1,8 +1,11 @@
 .settings-page {
   &__wrapper {
-    width: 100vw;
-    height: 100vh;
-    max-height: 100vh;
+    margin: 0 auto;
+    background-color: $color-alice-blue-light;
+  }
+  &__wrapper::after {
+    height: 100%;
+    z-index: -1;
     background-color: $color-alice-blue-light;
   }
 
@@ -39,6 +42,9 @@
   .settings-page {
     &__header {
       height: 140px;
+    }
+    &__content {
+      min-height: 1200px;
     }
 
     &__side-menu {
