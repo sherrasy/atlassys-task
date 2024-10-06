@@ -1,24 +1,21 @@
-import Form from "@/components/form/form"
-import Menu from "@/components/menu/menu"
-import Header from "@components/header/header"
+import Form from '@/components/form/form';
+import Menu from '@/components/menu/menu';
+import Header from '@components/header/header';
 
 function SettingsPage() {
+  return (
+    <div className='settings-page__wrapper'>
+      <header>
+        <Header />
+      </header>
+      <aside>
+        <Menu />
+      </aside>
+      <main>
+        <Form />
+      </main>
+    </div>
+  );
+}
 
-    return (
-      <>
-  Settings Page
-  <header>
-    <Header/>
-  </header>
-  <aside>
-    <Menu/>
-  </aside>
-  <main>
-    <Form/>
-  </main>
-      </>
-    )
-  }
-  
-  export default SettingsPage
-  
+export default SettingsPage;

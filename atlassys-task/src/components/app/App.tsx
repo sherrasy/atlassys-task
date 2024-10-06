@@ -1,12 +1,11 @@
-import SettingsPage from "@/pages/settings-page/settings-page"
+import SettingsPage from '@/pages/settings-page/settings-page';
 
 function App() {
-
   return (
     <>
-<SettingsPage/>
+      <SettingsPage />
     </>
-  )
+  );
 }
 
-export default App
+export default App;
