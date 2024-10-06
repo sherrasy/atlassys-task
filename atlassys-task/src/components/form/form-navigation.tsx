@@ -14,7 +14,7 @@ function FormNavigation() {
         <span
           key={id}
           className={`form-navigation__option ${
-            isActive === id ? 'ative-link' : ''
+            isActive === id ? 'active-link' : ''
           }`}
           onClick={() => handleActive(id)}
         >

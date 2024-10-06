@@ -5,13 +5,13 @@ import Header from '@components/header/header';
 function SettingsPage() {
   return (
     <div className='settings-page__wrapper'>
-      <header>
+      <header  className='settings-page__header'>
         <Header />
       </header>
-      <aside>
+      <aside className='settings-page__side-menu'>
         <Menu />
       </aside>
-      <main>
+      <main className='settings-page__content'>
         <Form />
       </main>
     </div>

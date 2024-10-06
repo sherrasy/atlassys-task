@@ -1,0 +1,60 @@
+.menu {
+  &__container {
+    display: flex;
+    flex-direction: column;
+    padding: 33px 23px 0px 44px;
+    max-width: 250px;
+    background-color: $color-white;
+    height: calc(100% - 34px);
+  }
+  &__logo svg {
+    width: 183px;
+    height: 36px;
+  }
+
+  &__navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 39px;
+    margin-top: 31px;
+  }
+}
+
+.navigation {
+  &__option {
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    height: 25px;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: $color-dark-gray;
+    &.active-option::before {
+      content: url('@assets/icons/nav-hover-icon.svg');
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__option.active-option,
+  &__option:hover {
+    color: $color-blue;
+    svg path {
+      fill: $color-blue;
+    }
+  }
+
+  &__icon svg {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .menu {
+    &__container {
+      display: none;
+    }
+  }
+}
