@@ -122,7 +122,6 @@
   }
 
   &__button {
-    padding: 14px 74px;
     border: none;
     border-radius: 15px;
     background-color: $color-blue;
@@ -186,7 +185,7 @@
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 853px) {
   .form-profile {
     &__fields {
       display: grid;
@@ -208,9 +207,23 @@
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 1023px) and (max-width: 1111px) {
+  .form {
+    &__container form {
+      gap: 10px;
+    }
+  }
+  .form-profile {
+    &__fields {
+      grid-column-gap: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 852px) {
   .form {
     &__container {
+      max-height: 1180px;
       margin: 25px;
       padding: 22px 20px;
       border-radius: 15px;
@@ -317,7 +330,7 @@
   }
 }
 
-@media screen and (min-width: 425px) and (max-width: 769px) {
+@media screen and (min-width: 425px) and (max-width: 852px) {
   .form-profile {
     &__container,
     &__fields {
