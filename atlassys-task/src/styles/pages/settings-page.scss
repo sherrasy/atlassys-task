@@ -4,11 +4,6 @@
     margin: 0 auto;
     background-color: $color-alice-blue-light;
   }
-  &__wrapper::after {
-    height: 100%;
-    z-index: -1;
-    background-color: $color-alice-blue-light;
-  }
 
   &__header {
     background-color: $color-white;
