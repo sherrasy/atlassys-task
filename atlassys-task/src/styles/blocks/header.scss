@@ -1,22 +1,32 @@
 .header {
   &__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     padding: 20px 40px;
-    background-color: $color-white;
   }
 
   &__title {
+    margin-top: 14px;
     font-size: 28px;
     color: $color-bay-of-many;
   }
 
   &__user-toggles,
   &__controls {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
   }
   &__user-toggles {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     gap: 35px;
   }
@@ -26,22 +36,32 @@
   }
 
   &__search-input {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     gap: 15px;
     background-color: $color-alice-blue-light;
     border-radius: 40px;
-    padding: 15px 25px;
-    max-width: 255px;
+    padding: 10px 23px;
+    width: 210px;
     max-height: 50px;
     svg {
+      margin-left: 4px;
+      margin-bottom: 4px;
       width: 20px;
       height: 20px;
     }
 
     input {
-      width: 152px;
+      margin-bottom: 4px;
+      margin-right: 4px;
+      width: 164px;
       font-size: 15px;
       background-color: transparent;
       border: none;
@@ -49,26 +69,102 @@
       color: $color-polo-blue;
     }
 
+    input::-webkit-input-placeholder,
+    input::-moz-placeholder,
+    input:-ms-input-placeholder,
+    input::-ms-input-placeholder,
     input::placeholder {
       color: $color-polo-blue;
     }
   }
 
   &__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    background-color: $color-alice-blue-light;
+    border-radius: 50%;
     width: 50px;
     height: 50px;
     svg {
+      margin-bottom: 2px;
       width: 25px;
       height: 25px;
     }
   }
-  &__avatar-container img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
+  &__avatar-container {
+    img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      -o-object-fit: cover;
+      object-fit: cover;
+    }
+  }
+
+  &__menu-toggle {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .header {
+    &__container {
+      padding: 25px;
+      height: 35px;
+    }
+
+    &__title {
+      margin-left: 30px;
+      font-size: 20px;
+    }
+
+    &__button {
+      display: none;
+    }
+    &__menu-toggle {
+      margin-top: 2px;
+      display: block;
+      svg {
+        width: 18px;
+        height: 18px;
+      }
+    }
+
+    &__avatar-container {
+      img {
+        width: 35px;
+        height: 35px;
+      }
+      margin-top: 4px;
+    }
+
+    &__search-input {
+      position: absolute;
+      left: 26px;
+      top: 80px;
+      justify-content: flex-start;
+      gap: 8px;
+      padding: 14px;
+      width: 296px;
+      height: 14px;
+      svg {
+        margin-top: 2px;
+        width: 16px;
+        height: 16px;
+      }
+
+      input {
+        margin-top: 2px;
+        width: 164px;
+        font-size: 13px;
+      }
+    }
   }
 }

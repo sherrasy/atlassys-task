@@ -20,9 +20,13 @@ function FormProfile() {
   };
 
   const [formData, setFormData] = useState<SettingsData>(defaultData);
+  const [passwordMask, setPasswordMask] = useState('**********');
   const handleInputChange = (evt: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = evt.target;
     setFormData({ ...formData, [name]: value });
+    if(name === FormFieldName.Password){
+      setPasswordMask(value.replace(/./g, "*"))
+    }
   };
 
   const handleFormSubmit = async (evt: FormEvent<HTMLFormElement>) => {
@@ -41,7 +45,9 @@ function FormProfile() {
               className='avatar-input'
               accept='image/png, image/jpeg'
             />
-            <Pencil className='avatar-input-toggle' />
+            <span className='avatar-input-toggle'>
+              <Pencil />
+            </span>
           </label>
         </div>
         <div className='form-profile__fields'>
@@ -99,12 +105,12 @@ function FormProfile() {
               </span>
             </label>
             <input
-              type='password'
+              type='text'
               id={FormFieldName.Password}
               name={FormFieldName.Password}
               className='form-input__input'
               placeholder={FormFieldLabel.Password}
-              value={formData.password || ''}
+              value={passwordMask || ''}
               onChange={handleInputChange}
               required
             />
@@ -120,7 +126,7 @@ function FormProfile() {
                 type='text'
                 id={FormFieldName.BirthDate}
                 name={FormFieldName.BirthDate}
-                className='form-input__input'
+                className='form-input__input-date'
                 placeholder={FormFieldLabel.BirthDate}
                 value={formData.birthDate || ''}
                 onChange={handleInputChange}
@@ -212,10 +218,10 @@ function FormProfile() {
               required
             />
           </div>
+          <button className='form-profile__button' type='submit'>
+            <span className='form-profile__button-text'>Save</span>
+          </button>{' '}
         </div>
-        <button className='form-profile__button' type='submit'>
-          <span className='form-profile__button-text'>Save</span>
-        </button>
       </form>
     </div>
   );

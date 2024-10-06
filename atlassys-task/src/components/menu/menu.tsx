@@ -2,7 +2,7 @@ import Logo from '@assets/icons/logo.svg?react';
 import { menuData } from './menu-data';
 
 function Menu() {
-  const isActive = menuData[7].id;
+  const isActive = menuData[8].id;
   return (
     <div className='menu__container'>
       <div className='menu__logo'>

@@ -4,8 +4,8 @@ import FormProfile from './form-profile';
 function Form() {
   return (
     <div className='form__container'>
-      <FormNavigation />
-      <FormProfile />
+       <FormNavigation />
+      <FormProfile /> 
     </div>
   );
 }
